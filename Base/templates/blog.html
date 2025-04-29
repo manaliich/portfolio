@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hariom | Blogs</title>
+    <link rel="stylesheet" href="{% static 'css/blog_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <h1>Hello, I’m Hariom</h1>
+        <p>Welcome to my blog — a space where I share insights, 
+            tutorials, and reflections from my learning journey in tech and beyond. 
+            Whether you're here to explore new ideas or dive 
+            into practical knowledge, I hope you find something 
+            valuable and inspiring.</p>
+    </div>
+</header>
+
+<!-- Blog Section -->
+<section id="blogs" class="container blog-section">
+    <h2>My Writings</h2>
+    <div class="blog-list">
+        {% for category, entries in categories.items %}
+            <div class="blog-category">
+                <div class="blog-category-title">{{ category }}</div>
+                <ul class="blog-entry-list">
+                    {% for entry in entries %}
+                        <li><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+</body>
+</html>

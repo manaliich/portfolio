@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(135deg, #7a36ff, #b47bff);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Blog Section */
+.blog-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.blog-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1e1e1e;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Blog List - Clean Layout */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    text-align: center;
+}
+
+/* Category Title */
+.blog-category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #7a36ff;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #7a36ff;
+    padding-left: 12px;
+    text-align: center;
+}
+
+/* Blog Entries List */
+.blog-entry-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+
+}
+
+.blog-entry-list li {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.blog-entry-list a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    text-align: center;
+}
+
+.blog-entry-list a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .blog-section h2 {
+        font-size: 28px;
+    }
+
+    .blog-category-title {
+        font-size: 1.25rem;
+    }
+} 

@@ -1,0 +1,117 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9fb;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.book-header {
+    background: linear-gradient(135deg, #7a36ff, #b47bff);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.book-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.book-header p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Book Section */
+.book-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.book-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+
+/* Book List Items */
+.book-entry-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.book-entry-list h3 {
+    font-size: 22px;
+    color: #1e1e1e;
+    margin-bottom: 8px;
+}
+
+.book-entry-list p {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.book-entry-list a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.book-entry-list a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Book Detail */
+.book-detail {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+    padding: 30px 0;
+}
+
+.book-detail h2 {
+    font-size: 22px;
+    margin-top: 24px;
+    color: #1e1e1e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .book-header h1 {
+        font-size: 32px;
+    }
+
+    .book-header p {
+        font-size: 16px;
+    }
+
+    .book-section h2 {
+        font-size: 28px;
+    }
+
+    .book-entry-list h3 {
+        font-size: 20px;
+    }
+}

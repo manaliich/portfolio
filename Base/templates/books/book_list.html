@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hariom | Books</title>
+    <link rel="stylesheet" href="{% static 'css/book_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="book-header">
+        <div class="container">
+            <h1>Hello, I’m Hariom</h1>
+            <p>Welcome to my collection of books — where I share key takeaways, insights, and reflections from the books I read. Whether you're looking for inspiration or a quick overview, I hope you 
+                find these summaries helpful and thought-provoking.</p>
+        </div>
+    </header>
+    
+    <section class="container book-section">
+        <h2>My Books</h2>
+        {% for book in books %}
+        <div class="book-card">
+            <h3>{{ book.title }}</h3>
+            <p><em>by {{ book.author }}</em></p>
+            <a href="{% url 'book_detail' slug=book.slug %}">Read my summary →</a>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>    

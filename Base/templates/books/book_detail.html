@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ book.title }} | Hariom's Books</title>
+    <link rel="stylesheet" href="{% static 'css/book_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="book-header">
+    <div class="container">
+        <h1>{{ book.title }}</h1>
+        <p><em>by {{ book.author }}</em></p>
+    </div>
+</header>
+
+<section class="container book-section">
+    <div class="book-detail">
+        <p>{{ book.format }}</p>
+
+        <h2>Summary</h2>
+        <p>{{ book.summary }}</p>
+
+        <a href="{% url 'book_list' %}" style="display: inline-block; margin-top: 20px;">← Back to all books</a>
+    </div>
+</section>
+</body>
+</html>
