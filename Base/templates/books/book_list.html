@@ -19,12 +19,12 @@
     </header>
     
     <section class="container book-section">
-        <h2>My Books</h2>
+        <h2>Books I have read</h2>
         {% for book in books %}
         <div class="book-card">
             <h3>{{ book.title }}</h3>
             <p><em>by {{ book.author }}</em></p>
-            <a href="{% url 'book_detail' slug=book.slug %}">Read my summary →</a>
+            <a href="{% url 'book_detail' slug=book.slug %}">Read the summary →</a>
         </div>
         {% endfor %}
     </section>

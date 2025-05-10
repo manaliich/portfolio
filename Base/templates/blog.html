@@ -28,7 +28,7 @@
     <div class="blog-list">
         {% for category, entries in categories.items %}
             <div class="blog-category">
-                <div class="blog-category-title">{{ category }}</div>
+                <div class="blog-category-title" style="color: black;">{{ category }}</div>
                 <ul class="blog-entry-list">
                     {% for entry in entries %}
                         <li><a href="{{ entry.link }}" target="_blank">{{ entry.title }}</a></li>

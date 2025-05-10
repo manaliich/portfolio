@@ -1,8 +1,8 @@
 /* General */
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f9f9fb;
-    color: #222;
+    background: #f5f6f9;
+    color: #333;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -17,17 +17,17 @@ body {
 
 /* Header */
 .book-header {
-    background: linear-gradient(135deg, #7a36ff, #b47bff);
+    background: linear-gradient(135deg, #4e73df, #224abe);
     color: white;
-    padding: 60px 20px;
+    padding: 70px 20px;
     text-align: center;
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .book-header h1 {
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -40,46 +40,114 @@ body {
 
 /* Book Section */
 .book-section {
-    padding: 60px 0;
-    text-align: center;
+    padding: 80px 0;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the book cards */
+    justify-content: center;
 }
 
+/* Book Title */
 .book-section h2 {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 40px;
     color: #1e1e1e;
     font-weight: 600;
+    text-align: center;
 }
 
 /* Book List Items */
 .book-entry-list {
     list-style: none;
     padding-left: 0;
-    text-align: center;
     margin-bottom: 2rem;
+}
+
+.book-entry-list li {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #4e73df;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-entry-list li:hover {
+    background-color: #f1f5fb;
+    transform: translateY(-5px);
 }
 
 .book-entry-list h3 {
     font-size: 22px;
-    color: #1e1e1e;
-    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .book-entry-list p {
     font-size: 16px;
-    color: #444;
-    margin-bottom: 10px;
+    color: #555;
+    margin-bottom: 12px;
 }
 
 .book-entry-list a {
     font-weight: 600;
-    color: #2563eb;
+    color: #4e73df;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.3s ease;
 }
 
 .book-entry-list a:hover {
-    color: #1d4ed8;
+    color: #224abe;
+    text-decoration: underline;
+}
+
+/* Book Card */
+.book-card {
+    width: 80%;  /* Controls width of the book cards */
+    max-width: 500px;  /* Max width to make it look neat */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-left: 5px solid #4e73df;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.book-card:hover {
+    background-color: #f1f5fb;
+    transform: translateY(-5px);
+}
+
+.book-card h3 {
+    font-size: 22px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.book-card a {
+    font-weight: 600;
+    color: #4e73df;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.book-card a:hover {
+    color: #224abe;
     text-decoration: underline;
 }
 
@@ -88,19 +156,27 @@ body {
     max-width: 800px;
     margin: auto;
     text-align: left;
-    padding: 30px 0;
+    padding: 40px 0;
 }
 
 .book-detail h2 {
-    font-size: 22px;
+    font-size: 24px;
     margin-top: 24px;
     color: #1e1e1e;
+    font-weight: 600;
+}
+
+.book-detail p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .book-header h1 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .book-header p {
@@ -108,10 +184,23 @@ body {
     }
 
     .book-section h2 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .book-entry-list h3 {
         font-size: 20px;
+    }
+
+    .book-entry-list li {
+        padding: 15px;
+    }
+
+    .book-entry-list p {
+        font-size: 14px;
+    }
+
+    /* Book Card */
+    .book-card {
+        width: 90%;  /* Wider on mobile */
     }
 }
